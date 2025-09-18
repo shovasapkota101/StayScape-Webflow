@@ -6,6 +6,7 @@ import About from './Component/Pages/About'
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
 import Feature from './Component/Pages/Feature'
 import Gallery from './Component/Pages/Gallery'
+import Reviews from './Component/Pages/Reviews'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +18,8 @@ function App() {
           <Route path="/" element={
             <>
                 <Hero/> <About/>
-                <Gallery/> <Feature/>
+                <Gallery/> <Feature/> 
+                <Reviews/>
             </>
           }
           />

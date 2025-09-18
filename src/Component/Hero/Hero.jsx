@@ -73,7 +73,21 @@ const Hero = () => {
                     </div>
 
                      <div className='flex justify-between gap-4'>
-                    <li className='cursor-pointer hover:text-blue-600 text-3xl font-medium'>Reviews <p className='text-sm text-gray-500'>What guests say</p></li>
+                      <button onClick={() => {
+                        const reviewsection = document.getElementById('review');
+                        if(reviewsection){
+                          reviewsection.scrollIntoView({
+                            behavior:'smooth'
+                          });
+                        }
+                      }}
+                       className='text-left hover:text-blue-600 text-3xl font-medium'
+                      >
+                        Reviews
+                        <p className='text-sm text-gray-500'>What guests say</p>
+
+                      </button>
+
                    
                     <li className='cursor-pointer hover:text-blue-600 text-3xl font-medium'>Pricing <p className='text-sm text-gray-500'>Rates per night</p></li>
                     
@@ -126,7 +140,7 @@ const Hero = () => {
         </div>
 
               <div className='flex'>
-                <img src={BannerImage} alt="Banner"  className='w-250 rounded-4xl h-240 shadow-md'/>
+                <img src={BannerImage} alt="Banner"  className='w-250 rounded-4xl h-240 shadow-md object-cover'/>
                 <div className='absolute bottom-0 right-10 border border-gray-300 rounded-full h-20 w-20 flex items-center justify-center cursor-pointer bg-white hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out '><MapIcon size={35} strokeWidth={1} className='text-gray-600'/></div>
               </div>
         </div> 
