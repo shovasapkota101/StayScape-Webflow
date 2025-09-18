@@ -169,8 +169,8 @@ const Reviews = () => {
 
 
 
-           <div className='flex bg-gray-100 pb-30 mt-60'>
-           <div className='flex flex-col ml-30'>
+           <div className='flex bg-gray-100 pb-50 mt-60'>
+           <div className='flex flex-col ml-20'>
              <h1 className=' text-3xl mt-30'>
                 <span className='inline-flex -translate-y-1'>
                     <span className='rounded-full bg-black h-2 w-2 mr-3 animate-pulse' />

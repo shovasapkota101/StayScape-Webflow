@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
 import Feature from './Component/Pages/Feature'
 import Gallery from './Component/Pages/Gallery'
 import Reviews from './Component/Pages/Reviews'
+import Pricing from './Component/Pages/Pricing'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
                 <Hero/> <About/>
                 <Gallery/> <Feature/> 
                 <Reviews/>
+                <Pricing/>
             </>
           }
           />

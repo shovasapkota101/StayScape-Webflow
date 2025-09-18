@@ -88,8 +88,21 @@ const Hero = () => {
 
                       </button>
 
-                   
-                    <li className='cursor-pointer hover:text-blue-600 text-3xl font-medium'>Pricing <p className='text-sm text-gray-500'>Rates per night</p></li>
+                      <button onClick={() => {
+                        const pricingsection = document.getElementById('pricing');
+                        if(pricingsection){
+                          pricingsection.scrollIntoView({
+                            behavior:'smooth'
+                          });
+                        }
+                      }}
+                      className='text-left hover:text-blue-600 text-3xl font-medium'
+                      >
+                        Pricing
+                        <p className='text-sm text-gray-500'>Rates per night</p>
+
+                      </button>
+
                     
                     <li className='cursor-pointer hover:text-blue-600 text-3xl font-medium'>Location <p className='text-sm text-gray-500'>Our NYC address</p></li>
                     </div>
