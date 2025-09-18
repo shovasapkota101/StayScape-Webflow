@@ -7,7 +7,7 @@ const Gallery = () => {
         <div className='flex flex-col justify-center items-center gap-3'>
         
         <h1 className='text-2xl mt-20'> 
-            <span className='inline-flex '>
+            <span className='inline-flex -translate-y-1'>
                 <span className=' animate-pulse duration-300 rounded-full bg-black w-2 h-2 mr-2 '/>
             </span>
              Gallery</h1>

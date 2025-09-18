@@ -55,8 +55,23 @@ const Hero = () => {
                       
                     </button>
                    
-                    <li className='cursor-pointer hover:text-blue-600 text-3xl font-medium'>Features <p className='text-sm text-gray-500'>Made for comfort</p></li>
+                   <button onClick={() =>{
+                    const featuressection = document.getElementById('features');
+                    if(featuressection){
+                      featuressection.scrollIntoView({
+                        behavior : 'smooth'
+                      });
+                    }
+                   } }
+                    className='text-left hover:text-blue-600 text-3xl font-medium'
+                   >
+                    Features
+                    <p className='text-sm text-gray-500'>Made for comfort</p>
+
+                   </button>
+
                     </div>
+
                      <div className='flex justify-between gap-4'>
                     <li className='cursor-pointer hover:text-blue-600 text-3xl font-medium'>Reviews <p className='text-sm text-gray-500'>What guests say</p></li>
                    
@@ -112,14 +127,14 @@ const Hero = () => {
 
               <div className='flex'>
                 <img src={BannerImage} alt="Banner"  className='w-250 rounded-4xl h-240 shadow-md'/>
-                <div className='absolute bottom-0 right-10 border border-gray-300 rounded-full h-20 w-20 flex items-center justify-center cursor-pointer bg-white hover:bg-blue-600 hover:text-white transition=all duration-300 ease-in-out '><MapIcon size={35} strokeWidth={1} className='text-gray-600'/></div>
+                <div className='absolute bottom-0 right-10 border border-gray-300 rounded-full h-20 w-20 flex items-center justify-center cursor-pointer bg-white hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out '><MapIcon size={35} strokeWidth={1} className='text-gray-600'/></div>
               </div>
         </div> 
         <div className='relative w-fit mt-8'> <img src={Introduction_image} alt="Introduction" />
         <h1 className='absolute text-white top-10 left-10 font-light text-2xl py-3 px-3'>
-          <span className=' inline-flex h-3 w-3 '>
+          <span className=' inline-flex h-3 w-3 mr-2 -translate-y-1'>
             <span className=' animate-pulse duration-300 rounded-full h-2 w-2 bg-white
-            mr-2'></span>
+            '></span>
           </span>
           Introduction</h1>
           <h2 className='absolute text-white text-8xl top-30 left-10 font-normal'>5th Avenue apartment <br/> in the  heart of New York</h2>
