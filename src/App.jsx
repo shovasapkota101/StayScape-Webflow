@@ -8,6 +8,8 @@ import Feature from './Component/Pages/Feature'
 import Gallery from './Component/Pages/Gallery'
 import Reviews from './Component/Pages/Reviews'
 import Pricing from './Component/Pages/Pricing'
+import Location from './Component/Pages/Location'
+import Footer from './Component/Pages/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +24,8 @@ function App() {
                 <Gallery/> <Feature/> 
                 <Reviews/>
                 <Pricing/>
+                <Location/>
+                <Footer/>
             </>
           }
           />

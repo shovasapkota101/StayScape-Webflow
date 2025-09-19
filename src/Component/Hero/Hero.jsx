@@ -103,8 +103,21 @@ const Hero = () => {
 
                       </button>
 
+                      <button onClick={() => {
+                        const locationsection = document.getElementById('location');
+                        if (locationsection){
+                          locationsection.scrollIntoView({
+                            behavior:'smooth'
+                          });
+                        }
+                      }}
+                      className='text-left hover:text-blue-600 text-3xl font-medium'>
+                        Location
+                         <p className='text-sm text-gray-500'>Our NYC address</p>
+                      </button>
+
                     
-                    <li className='cursor-pointer hover:text-blue-600 text-3xl font-medium'>Location <p className='text-sm text-gray-500'>Our NYC address</p></li>
+                    {/* <li className='cursor-pointer hover:text-blue-600 text-3xl font-medium'>Location <p className='text-sm text-gray-500'>Our NYC address</p></li> */}
                     </div>
                     <div className='relative overflow-hidden rounded-4xl'>
                       <img src={Reserve_Image} alt="Reserve" className='h-50 w-full rounded-4xl transform transition-transform duration-500 hover:scale-110' />
@@ -154,7 +167,7 @@ const Hero = () => {
 
               <div className='flex'>
                 <img src={BannerImage} alt="Banner"  className='w-250 rounded-4xl h-240 shadow-md object-cover'/>
-                <div className='absolute bottom-0 right-10 border border-gray-300 rounded-full h-20 w-20 flex items-center justify-center cursor-pointer bg-white hover:bg-blue-600 hover:text-white transition-all duration-300 ease-in-out '><MapIcon size={35} strokeWidth={1} className='text-gray-600'/></div>
+                <div className='absolute bottom-0 right-10 border border-gray-300 rounded-full h-20 w-20 flex items-center justify-center cursor-pointer bg-white hover:bg-blue-600  transition-all duration-300 ease-in-out '><MapIcon size={35} strokeWidth={1} className='text-gray-600 hover:text-white'/></div>
               </div>
         </div> 
         <div className='relative w-fit mt-8'> <img src={Introduction_image} alt="Introduction" />

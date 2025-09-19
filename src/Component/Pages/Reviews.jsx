@@ -16,7 +16,7 @@ import Cancellation from '../assets/Cancel.JPG'
 
 const Reviews = () => {
   return (
-    <div id='review' className=''>
+    <div id='review' >
         <div className='flex flex-col items-center justify-center mt-40 '>
             <h1 className='text-3xl'>
                 <span className='inline-flex'>
