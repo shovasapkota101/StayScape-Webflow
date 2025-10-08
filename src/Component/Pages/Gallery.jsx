@@ -21,12 +21,12 @@ const Gallery = () => {
             </span>
              Gallery</h1>
         <p className='text-7xl font-medium'>Inside the Cozy <br />NYC Apartment</p>
-        <button className='flex gap-3 items-center mt-5 border rounded-full h-20 w-80 bg-black text-white text-4xl py-2 px-4 hover:bg-blue-800 duration-300 '> <div className='flex items-center justify-center h-13 w-13 border rounded-full bg-white text-black '> <ArrowUpRight size={35} strokeWidth={1} className=''/> </div> <span className=''>Reserve Now</span></button>
+        <button className='flex  cursor-pointer gap-3 items-center mt-5 border rounded-full h-23 w-70 bg-black text-white text-3xl py-2 px-4 hover:bg-blue-800 duration-300 '> <div className='flex items-center justify-center h-15 w-15 border rounded-full bg-white text-black '> <ArrowUpRight size={35} strokeWidth={1} className=''/> </div> <span className=''>Reserve Now</span></button>
     </div>
 
     <div>
-      <div className='flex'>
-        <span className='relative mt-30 ml-30 '>
+      <div className='flex mr-10'>
+        <span className='relative mt-30 ml-10 '>
           <img src={DiningroomImg} alt="DiningRoom" className='rounded-4xl h-100 w-130 object-cover'/>
           <p className='absolute top-80 font-medium text-xl text-white left-10'>01 <span className='text-4xl block'>Dining Room</span></p>
         </span>
@@ -42,8 +42,8 @@ const Gallery = () => {
         </span>
       </div>
 
-      <div className='flex'>
-        <span className='relative ml-30 '>
+      <div className='flex mr-10'>
+        <span className='relative ml-10 '>
           <img src={KitchenRoom} alt="Kitchen" className='rounded-4xl h-160 w-130 object-cover'/>
           <p className='absolute top-130 font-medium text-xl text-white left-10'>02 <span className='text-4xl block'>Kitchen</span></p>
         </span>
@@ -59,8 +59,8 @@ const Gallery = () => {
         </span>
       </div>
 
-      <div className='flex'>
-        <span className='relative ml-30 '>
+      <div className='flex mr-10'>
+        <span className='relative ml-10 '>
           <img src={DecorativeFoyer} alt="Decoration" className='rounded-4xl h-120 w-130 object-cover'/>
           <p className='absolute top-90 font-medium text-xl text-white left-10'>03 <span className='text-4xl block'>Decorative Foyer</span></p>
         </span>

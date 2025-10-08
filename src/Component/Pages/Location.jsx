@@ -7,7 +7,7 @@ const Location = () => {
     <div id='location'>
        <div className='bg-black pb-20'>
          <div className='flex flex-col text-white items-center justify-center '>
-            <h1 className='mt-30 text-2xl'>
+            <h1 className='mt-10 text-2xl'>
                 <span className='inline-flex'>
                     <span className='rounded-full bg-white h-2 w-2 animate-pulse mr-3 -translate-y-1' />
                 </span>
@@ -32,7 +32,7 @@ const Location = () => {
          </div>
          
          <span className='relative flex'>
-            <img src={MapImg} alt="Location" className='mt-40 h-200 w-full overflow-hidden object-cover' />
+            <img src={MapImg} alt="Location" className='mt-40 h-200 w-[100rem] ml-10 rounded-4xl overflow-hidden object-cover' />
             <span className='absolute top-130 right-200 border border-white rounded-full h-18 w-18 flex items-center justify-center cursor-pointer bg-white'>
                  <span inline-flex>
                 <span className='absolute top-18 right-15 rounded-full bg-white h-2 w-2' />
@@ -46,7 +46,7 @@ const Location = () => {
             </span>
            
          </span>
- <hr className='bg-gray-500 mt-50 w-full h-0.5' />
+ <hr className='bg-gray-500 mt-20 w-full h-0.5' />
 
         
        </div>

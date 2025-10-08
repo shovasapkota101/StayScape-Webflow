@@ -17,33 +17,33 @@ const Feature = () => {
 
 
 
-       <div className='flex mt-10'>
-        <div className='flex items-center justify-center border border-gray-300 h-40 w-120 rounded-4xl gap-5 ml-25 mt-5'>
+       <div className='flex mt-10 mr-10'>
+        <div className='flex items-center justify-center border border-gray-300 h-40 w-120 rounded-4xl gap-5 ml-10 mt-5'>
         <h1 className='text-7xl'>2</h1>
-        <p className=' text-4xl font-medium'>Bedrooms <span className='block text-xl text-gray-500'>Master and a guests <br /> bedrooms</span></p>
-        <span className=' ml-20 border rounded-full h-20 w-20 items-center justify-center flex bg-gray-100'>
+        <p className=' text-4xl'>Bedrooms <span className='block text-xl text-gray-500'>Master and a guests <br /> bedrooms</span></p>
+        <span className=' ml-20 border border-gray-300 rounded-full h-20 w-20 items-center justify-center flex bg-gray-100'>
             <Bed size={30} strokeWidth={1} />
         </span>
        </div>
-       <div className='flex ml-25 mt-5 gap-5 items-center border h-40 w-120 border-gray-300 rounded-4xl'>
+       <div className='flex ml-25 mt-5 gap-5 items-center border h-40 w-125 border-gray-300 rounded-4xl'>
         <h1 className='text-7xl ml-5'>1</h1>
-        <p className='text-4xl font-medium'>Bathroom <span className='text-xl text-gray-500 block'>Large shared bathroom</span></p>
-        <span className='ml-15 border bg-gray-100 rounded-full h-20 w-20 flex items-center justify-center'>
+        <p className='text-4xl'>Bathroom <span className='text-xl text-gray-500 block'>Large shared bathroom</span></p>
+        <span className='ml-15 border border-gray-300 bg-gray-100 rounded-full h-20 w-20 flex items-center justify-center'>
             <Bath size={30} strokeWidth={1}/>
         </span>
        </div>
 
-       <div className='flex items-center border rounded-4xl border-gray-300 h-40 w-120 gap-5 ml-25 mt-5'>
+       <div className='flex items-center border rounded-4xl border-gray-300 h-40 w-125 gap-5 ml-25 mt-5'>
         <h1 className='text-7xl ml-5'>6</h1>
-        <p className='text-4xl font-medium'>Guests <span className='block text-xl text-gray-500'>For up to 6 people</span></p>
-        <span className='border rounded-full h-20 w-20 flex items-center justify-center bg-gray-100 ml-25'>
+        <p className='text-4xl'>Guests <span className='block text-xl text-gray-500'>For up to 6 people</span></p>
+        <span className='border border-gray-300 rounded-full h-20 w-20 flex items-center justify-center bg-gray-100 ml-25'>
             <Users size={30} strokeWidth={1}/>
         </span>
        </div>
        </div>
         
           
-         <div className="mt-40 px-10">
+         <div className="mt-20 px-10">
   <div className="flex items-center justify-center gap-2 mb-10">
     <span className="inline-flex">
       <span className="border rounded-full animate-pulse h-2 w-2 bg-black" />
@@ -54,15 +54,15 @@ const Feature = () => {
   <div className="flex flex-row justify-between gap-20 w-full">
    
     <div className="flex flex-col gap-5 w-1/3">
-      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-70">
+      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-60">
         <p className="text-3xl font-medium">Fast Wi-Fi</p>
         <Wifi size={40} strokeWidth={1} />
       </div>
-      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-40">
+      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-30">
         <p className="text-3xl font-medium">Equipped Kitchen</p>
         <Microwave size={50} strokeWidth={1} />
       </div>
-      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-50">
+      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-35">
         <p className="text-3xl font-medium">Washer & Dryer</p>
         <WashingMachine size={50} strokeWidth={1} />
       </div>
@@ -79,15 +79,15 @@ const Feature = () => {
     </div>
 
     <div className="flex flex-col gap-5 w-1/3">
-      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-45">
+      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-35">
         <p className="text-3xl font-medium">Air Conditioning</p>
         <AirVent size={40} strokeWidth={1} />
       </div>
-      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-40">
+      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-30">
         <p className="text-3xl font-medium">TV and Streaming</p>
         <Tv2 size={40} strokeWidth={1} />
       </div>
-      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-50">
+      <div className="flex items-center border border-gray-300 rounded-4xl h-30 px-4 gap-40">
         <p className="text-3xl font-medium">Safety Features</p>
         <Siren size={50} strokeWidth={1} />
       </div>

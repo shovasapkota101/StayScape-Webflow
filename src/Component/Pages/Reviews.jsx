@@ -1,5 +1,5 @@
 import { ArrowDown, ArrowUpRight, Leaf, Star } from 'lucide-react'
-import React from 'react'
+import React, {useState} from 'react'
 import PawanImg from '../assets/pawan.jpg'
 import BhimImg from '../assets/bhim.jpg'
 import MinaImg from '../assets/mina.jpg'
@@ -15,9 +15,43 @@ import DogImg from '../assets/dog.jpg'
 import Cancellation from '../assets/Cancel.JPG'
 
 const Reviews = () => {
+
+    const [openIndex, setOpenIndex] = useState(null);
+
+  const faqData = [
+    {
+      image: CentralPark,
+      question: 'How close to Central Park?',
+      answer: `Just a 2-minute walk – perfect for
+      morning strolls or evening relaxation.`,
+    },
+    {
+      image: Location,
+      question: 'Why the location is special?',
+      answer: `It's on 5th Avenue, near Central
+      Park, The Met, and many great cafes.`,
+    },
+    {
+      image: DogImg,
+      question: 'Do you allow small pets?',
+      answer: `Yes – small pets are welcome, so
+      feel free to bring your furry friends along.`,
+    },
+    {
+      image: Cancellation,
+      question: "What's the cancellation policy?",
+      answer: `Free cancellation within 48 hours
+      of booking. Standard Airbnb policy applies.`,
+    }, 
+  ];
+
+  const toggleItem = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <div id='review' >
-        <div className='flex flex-col items-center justify-center mt-40 '>
+        <div className='flex flex-col items-center justify-center mt-20 '>
             <h1 className='text-3xl'>
                 <span className='inline-flex'>
                     <span className='rounded-full bg-black h-2 w-2 animate-pulse mr-3 -translate-y-1' />
@@ -54,7 +88,7 @@ const Reviews = () => {
 
          <div className='flex mt-20 text-3xl'>
 
-            <div className='border border-gray-300 mt-20 rounded-4xl ml-20 h-110 w-130 p-6 '>
+            <div className='border border-gray-300 mt-20 rounded-4xl ml-10 h-110 w-130 p-6 '>
              <span className='flex'>
                  <img src={PawanImg} alt="Pawan" className='h-15 rounded-full'/>
                 <h1 className='flex flex-col ml-3'>Pawan D. <span className='text-xl text-gray-500'>Kailali, Nepal</span> </h1>
@@ -91,7 +125,7 @@ const Reviews = () => {
 
           <div className='flex text-3xl'>
 
-            <div className='border border-gray-300 rounded-4xl mt-10 ml-20 h-90 w-130 p-6 '>
+            <div className='border border-gray-300 rounded-4xl mt-10 ml-10 h-90 w-130 p-6 '>
              <span className='flex'>
                  <img src={PrabinImg} alt="Prabim" className='h-15 rounded-full'/>
                 <h1 className='flex flex-col ml-3'>Hemanta D. <span className='text-xl text-gray-500'>Kailali, Nepal</span> </h1>
@@ -127,7 +161,7 @@ const Reviews = () => {
 
           <div className='flex text-3xl'>
 
-            <div className='border border-gray-300 rounded-4xl ml-20 h-90 w-130 p-6 '>
+            <div className='border border-gray-300 rounded-4xl ml-10 h-90 w-130 p-6 '>
              <span className='flex'>
                  <img src={LaxmanImg} alt="Laxman" className='h-15 rounded-full'/>
                 <h1 className='flex flex-col ml-3'>Laxman D. <span className='text-xl text-gray-500'>Kailali, Nepal</span> </h1>
@@ -161,15 +195,15 @@ const Reviews = () => {
             </div>
             </div>
 
-           <div className='flex mt-40 items-center justify-center'>
-             <button className='text-3xl border h-20 w-50 rounded-full bg-black text-white hover:bg-blue-700 hover:text-white duration-300'>
+           <div className='flex mt-20 items-center justify-center'>
+             <button className='text-3xl cursor-pointer border h-20 w-50 rounded-full bg-black text-white hover:bg-blue-700 hover:text-white duration-300'>
                 View  All
             </button>
            </div>
 
 
 
-           <div className='flex bg-gray-100 pb-50 mt-60'>
+           <div className='flex bg-gray-100 pb-20 mt-20'>
            <div className='flex flex-col ml-20'>
              <h1 className=' text-3xl mt-30'>
                 <span className='inline-flex -translate-y-1'>
@@ -177,28 +211,43 @@ const Reviews = () => {
                 </span>
                 FAQ</h1>
                 <p className='text-7xl font-medium mt-5 w-150 leading-[1.2]'>Everything You <br /> Need to Know</p>
-               <button className='flex gap-4 items-center mt-10 border rounded-full h-20 w-70 bg-black text-white text-2xl px-4 hover:bg-blue-800 duration-300 '> <div className='flex items-center justify-center h-15 w-15 border rounded-full bg-white text-black '> <ArrowUpRight size={30} strokeWidth={1}/> </div>Reserve Now</button>
+               <button className='flex gap-4 items-center cursor-pointer mt-10 border rounded-full h-20 w-70 bg-black text-white text-2xl px-4 hover:bg-blue-800 duration-300 '> <div className='flex items-center justify-center h-15 w-15 border rounded-full bg-white text-black '> <ArrowUpRight size={30} strokeWidth={1}/> </div>Reserve Now</button>
            </div>
-             <div className='ml-70'>
-                <span className='flex border border-gray-300 bg-white rounded-full h-40 font-medium items-center gap-13 justify-end mr-10  mt-25 w-190'>
-                <img src={CentralPark} alt="Park" className=' h-30 w-30 rounded-full object-cover' />
-                <p className='text-4xl'>How close to Central Park?</p> <ArrowDown size={40} strokeWidth={1} className='mr-10'/>
-             </span>
 
-             <span className='flex border border-gray-300 bg-white rounded-full h-40 font-medium items-center gap-11 justify-end mr-10 mt-10 w-190'>
-                <img src={Location} alt="Location" className=' h-30 w-30 rounded-full object-cover' />
-                <p className='text-4xl'>Why the location is special?</p> <ArrowDown size={40} strokeWidth={1} className='mr-10'/>
-             </span>
 
-             <span className='flex border border-gray-300 bg-white rounded-full h-40 font-medium items-center gap-17 justify-end mr-20 mt-10 w-190'>
-                <img src={DogImg} alt="Dog" className=' h-30 w-30 rounded-full object-cover' />
-                <p className='text-4xl'>Do you allow small pets?</p> <ArrowDown size={40} strokeWidth={1} className='mr-10'/>
-             </span>
+             <div className='ml-50 cursor-pointer'>
 
-             <span className='flex border border-gray-300 bg-white rounded-full h-40 font-medium items-center gap-5 justify-end mr-20 mt-10 w-190'>
-                <img src={Cancellation} alt="Policy" className=' h-30 w-30 rounded-full object-cover' />
-                <p className='text-4xl'>What's the cancellation policy?</p> <ArrowDown size={40} strokeWidth={1} className='mr-10'/>
-             </span>
+                 <div className="ml-10 mt-30 cursor-pointer flex flex-col gap-10">
+      {faqData.map((item, index) => (
+        <div key={index} className="flex flex-col">
+          <span
+            className="flex border border-gray-300 bg-white rounded-full h-40 items-center gap-12 justify-end mr-10 w-[42rem] hover:text-blue-300 duration-300"
+            onClick={() => toggleItem(index)}
+          >
+            <img
+              src={item.image}
+              alt="Icon"
+              className="h-30 w-30 rounded-full object-cover"
+            />
+            <p className="text-3xl">{item.question}</p>
+            <ArrowDown
+              size={40}
+              strokeWidth={1}
+              className={`mr-10 transition-transform duration-300 ${
+                openIndex === index ? 'rotate-180' : ''
+              }`}
+            />
+          </span>
+
+          {openIndex === index && (
+            <div className="mr-10 w-[42rem] text-start text-3xl text-gray-400 bg-gray-100 px-20 py-10 rounded-4xl border border-gray-200 shadow">
+              {item.answer}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+           
              </div>
            </div>
         

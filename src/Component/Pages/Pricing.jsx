@@ -1,5 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import React from 'react'
+import Marquee from 'react-fast-marquee'
+
 import Pricing1Img from '../assets/pricing1.avif'
 import Pricing2Img from '../assets/pricing2.avif'
 import Pricing3Img from '../assets/pricing3.avif'
@@ -7,19 +9,19 @@ import Pricing4Img from '../assets/pricing4.avif'
 import Pricing5Img from '../assets/pricing5.avif'
 
 const pricingImages = [
-  { src: Pricing1Img, height: 'h-[20rem]', width: 'w-[13rem]' },
-  { src: Pricing2Img, height: 'h-[24rem]', width: 'w-[15rem]' },
-  { src: Pricing3Img, height: 'h-[22rem]', width: 'w-[14rem]' },
-  { src: Pricing4Img, height: 'h-[26rem]', width: 'w-[16rem]' },
-  { src: Pricing5Img, height: 'h-[25rem]', width: 'w-[15rem]' },
+  { src: Pricing1Img, height: 'h-[22rem]', width: 'w-[22rem]', },
+  { src: Pricing2Img, height: 'h-[25rem]', width: 'w-[22rem]' },
+  { src: Pricing3Img, height: 'h-[33rem]', width: 'w-[22rem]' },
+  { src: Pricing4Img, height: 'h-[30rem]', width: 'w-[22rem]' },
+  { src: Pricing5Img, height: 'h-[27rem]', width: 'w-[22rem]' },
 ];
 
 
 const Pricing = () => {
   return (
-    <div id='pricing' className='bg-black pb-50' >
+    <div id='pricing' className='bg-black pb-20' >
         <div className='flex flex-col items-center justify-center pb-50  text-white'>
-            <h1 className=' mt-50 text-2xl '>
+            <h1 className=' mt-20 text-2xl '>
                 <span className='inline-flex mr-2'>
                     <span className='rounded-full bg-white animate-pulse h-2 w-2 -translate-y-1' />
                 </span>
@@ -31,21 +33,22 @@ const Pricing = () => {
                     <ArrowUpRight size={40} strokeWidth={1} className='group-hover:text-black duration-300' />
                     </span> <span className='group-hover:text-white duration-300'>Reserve Now</span> </button>
         </div>
-        <div className='relative w-full overflow-hidden'>
-        <div className='flex animate-slide whitespace-nowrap'>
-          {[
-            ...pricingImages,
-            ...pricingImages  
-          ].map((imgObj, idx) => (
-            <img
-            key={idx}
-              src={imgObj.src}
-              alt={`Pricing ${idx}`}
-              className={`${imgObj.height} ${imgObj.width} mx-3 rounded-4xl object-cover`}
-            />
-          ))}
-        </div>
-      </div>
+       
+     {/* Image Marque */}
+     <div className=' w-full overflow-hidden mt-10'>
+        <Marquee speed={100} gradient={false}>
+          <div className='flex items-start'>
+            {[...pricingImages, ...pricingImages].map((imgObj, idx) => (
+                <img
+                key={idx}
+                 src={imgObj.src}
+                 alt={`Pricing ${idx}`}
+                 className={`${imgObj.height} ${imgObj.width} mx-3 rounded-4xl object-cover`} />
+            ))}
+            </div>
+        </Marquee>
+     </div>
+
     </div>
   )
 }
