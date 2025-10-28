@@ -28,10 +28,10 @@ function App() {
                 <Pricing/>
                 <Location/>
                 <Footer/>
-                <Reserve/>
             </>
           }
           />
+          <Route path='/reserve' element={<Reserve/>}/>
          
         </Routes>
     </BrowserRouter>    

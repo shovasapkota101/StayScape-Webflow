@@ -9,8 +9,15 @@ import HomeOffice from '../assets/homeoffice.avif'
 import KitchenRoom from '../assets/kitchen.avif'
 import LivingRoom from '../assets/livingroom.avif'
 import CreativeWorkspace from '../assets/workspace.avif'
+import { useNavigate } from 'react-router-dom'
 
 const Gallery = () => {
+   const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/reserve');
+  };
+
   return (
     <div id='gallery' className='mt-20 pb-30 bg-gray-100'>
         <div className='flex flex-col justify-center items-center gap-3'>
@@ -21,7 +28,7 @@ const Gallery = () => {
             </span>
              Gallery</h1>
         <p className='text-7xl font-medium'>Inside the Cozy <br />NYC Apartment</p>
-        <button className='flex  cursor-pointer gap-3 items-center mt-5 border rounded-full h-23 w-70 bg-black text-white text-3xl py-2 px-4 hover:bg-blue-800 duration-300 '> <div className='flex items-center justify-center h-15 w-15 border rounded-full bg-white text-black '> <ArrowUpRight size={35} strokeWidth={1} className=''/> </div> <span className=''>Reserve Now</span></button>
+        <button className='flex  cursor-pointer gap-3 items-center mt-5 border rounded-full h-23 w-70 bg-black text-white text-3xl py-2 px-4 hover:bg-blue-800 duration-300 ' onClick={handleClick}> <div className='flex items-center justify-center h-15 w-15 border rounded-full bg-white text-black '> <ArrowUpRight size={35} strokeWidth={1} className=''/> </div> <span className=''>Reserve Now</span></button>
     </div>
 
     <div>

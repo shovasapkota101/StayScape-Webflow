@@ -3,9 +3,16 @@ import React, { useState } from 'react'
 import BannerImage from '../assets/img1.avif';
 import Introduction_image from '../assets/Introimg.avif';
 import Reserve_Image from '../assets/reserveImg.avif';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/reserve');
+  };
+
   return (
     <div>
     <div className='flex justify-between'>
@@ -117,7 +124,7 @@ const Hero = () => {
                       </button>
                       
                     </div>
-                    <div className='relative overflow-hidden rounded-4xl'>
+                    <div className='relative overflow-hidden rounded-4xl' onClick={handleClick}>
                       <img src={Reserve_Image} alt="Reserve" className='h-50 w-full rounded-4xl transform transition-transform duration-500 hover:scale-110' />
                       <p className='absolute text-white top-15 cursor-pointer ml-45 flex items-center gap-4 text-5xl font-medium py-3 px-3'>Reserve Now <ArrowUpRight size={50} /> </p>
                     </div>
@@ -137,7 +144,7 @@ const Hero = () => {
                <p className='text-2xl font-light ml-70 mt-8'>Loved by 200+ happy guests</p>
                
                   
-           <button className='flex px-4 py-2 items-center gap-1 border border-gray-300 rounded-full bg-black text-white mt-10 ml-70 h-20 w-70 hover:bg-blue-800 duration-200 hover:scale-105 '> <div className='flex items-center justify-center bg-white text-black border rounded-full h-13 w-14'><ArrowUpRight/></div> <span className='text-3xl'>Reserve Now</span></button>
+           <button className='flex px-4 py-2 items-center gap-1 border border-gray-300 rounded-full bg-black text-white mt-10 ml-70 h-20 w-70 hover:bg-blue-800 duration-200 hover:scale-105' onClick={handleClick}> <div className='flex items-center justify-center bg-white text-black border rounded-full h-13 w-14'><ArrowUpRight/></div> <span className='text-3xl'>Reserve Now</span></button>
 
           
                <button className='flex flex-col items-center border border-gray-300 rounded-4xl mt-12 ml-18 gap-8 px-30 py-8 shadow-sm w-fit space-x-2 '> 

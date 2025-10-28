@@ -13,6 +13,7 @@ import CentralPark from '../assets/Park.jpg'
 import Location from '../assets/location.jpg'
 import DogImg from '../assets/dog.jpg'
 import Cancellation from '../assets/Cancel.JPG'
+import { useNavigate } from 'react-router-dom'
 
 const Reviews = () => {
 
@@ -47,6 +48,12 @@ const Reviews = () => {
 
   const toggleItem = (index) => {
     setOpenIndex(openIndex === index ? null : index);
+  };
+
+   const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/reserve');
   };
 
   return (
@@ -211,7 +218,7 @@ const Reviews = () => {
                 </span>
                 FAQ</h1>
                 <p className='text-7xl font-medium mt-5 w-150 leading-[1.2]'>Everything You <br /> Need to Know</p>
-               <button className='flex gap-4 items-center cursor-pointer mt-10 border rounded-full h-20 w-70 bg-black text-white text-2xl px-4 hover:bg-blue-800 duration-300 '> <div className='flex items-center justify-center h-15 w-15 border rounded-full bg-white text-black '> <ArrowUpRight size={30} strokeWidth={1}/> </div>Reserve Now</button>
+               <button className='flex gap-4 items-center cursor-pointer mt-10 border rounded-full h-20 w-70 bg-black text-white text-2xl px-4 hover:bg-blue-800 duration-300 ' onClick={handleClick}> <div className='flex items-center justify-center h-15 w-15 border rounded-full bg-white text-black '> <ArrowUpRight size={30} strokeWidth={1}/> </div>Reserve Now</button>
            </div>
 
 

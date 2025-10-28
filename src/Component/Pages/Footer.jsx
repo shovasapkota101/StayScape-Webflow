@@ -1,9 +1,16 @@
 import { ArrowUpRight, Building2, Copyright } from 'lucide-react'
 import React from 'react'
 import FooterImg from '../assets/footer.avif'
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+   const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/reserve');
+  };
 
   return (
     <div>
@@ -16,7 +23,7 @@ const Footer = () => {
                 </span>
                 Your Stay</h1>
                 <p className='text-7xl font-medium mt-5 w-150 leading-[1.2]'>Always Here for Our Guests</p>
-               <button className='group relative flex items-center top-10 cursor-pointer border border-white text-black h-20 w-fit rounded-full px-4 text-2xl gap-5 bg-white hover:bg-blue-800 duration-300 '> <span className='group-hover:bg-white group-hover:border-white border rounded-full bg-black text-white h-17 w-17 flex items-center justify-center duration-300'>
+               <button className='group relative flex items-center top-10 cursor-pointer border border-white text-black h-20 w-fit rounded-full px-4 text-2xl gap-5 bg-white hover:bg-blue-800 duration-300 ' onClick={handleClick}> <span className='group-hover:bg-white group-hover:border-white border rounded-full bg-black text-white h-17 w-17 flex items-center justify-center duration-300'>
                  <ArrowUpRight size={40} strokeWidth={1} className='group-hover:text-black duration-300' />
                  </span> <span className='group-hover:text-white duration-300'>Reserve Now</span> </button>
            </div>

@@ -7,6 +7,7 @@ import Pricing2Img from '../assets/pricing2.avif'
 import Pricing3Img from '../assets/pricing3.avif'
 import Pricing4Img from '../assets/pricing4.avif'
 import Pricing5Img from '../assets/pricing5.avif'
+import { useNavigate } from 'react-router-dom'
 
 const pricingImages = [
   { src: Pricing1Img, height: 'h-[22rem]', width: 'w-[22rem]', },
@@ -18,6 +19,12 @@ const pricingImages = [
 
 
 const Pricing = () => {
+   const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/reserve');
+  };
+
   return (
     <div id='pricing' className='bg-black pb-20' >
         <div className='flex flex-col items-center justify-center pb-50  text-white'>
@@ -29,7 +36,7 @@ const Pricing = () => {
                 <p className='text-8xl mt-5 font-medium'>$290/night</p>
                 <p className='mt-10 text-5xl font-medium leading-[1.3]'>Absolutely no hidden charges. <br /> All extra costs already included.</p>
 
-                 <button className='group relative flex items-center top-10 cursor-pointer border border-white text-black h-20 w-fit rounded-full px-4 text-2xl gap-5 bg-white hover:bg-blue-700 duration-300 '> <span className='group-hover:bg-white group-hover:border-white border rounded-full bg-black text-white h-17 w-17 flex items-center justify-center duration-300'>
+                 <button className='group relative flex items-center top-10 cursor-pointer border border-white text-black h-20 w-fit rounded-full px-4 text-2xl gap-5 bg-white hover:bg-blue-700 duration-300 ' onClick={handleClick}> <span className='group-hover:bg-white group-hover:border-white border rounded-full bg-black text-white h-17 w-17 flex items-center justify-center duration-300'>
                     <ArrowUpRight size={40} strokeWidth={1} className='group-hover:text-black duration-300' />
                     </span> <span className='group-hover:text-white duration-300'>Reserve Now</span> </button>
         </div>
