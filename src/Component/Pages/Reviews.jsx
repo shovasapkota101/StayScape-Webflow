@@ -58,7 +58,7 @@ const Reviews = () => {
 
   return (
     <div id='review' >
-        <div className='flex flex-col items-center justify-center mt-20 '>
+        <div className='flex flex-col items-center justify-center mt-10 '>
             <h1 className='text-3xl'>
                 <span className='inline-flex'>
                     <span className='rounded-full bg-black h-2 w-2 animate-pulse mr-3 -translate-y-1' />
@@ -93,7 +93,7 @@ const Reviews = () => {
                
         </div>
 
-         <div className='flex mt-20 text-3xl'>
+         <div className='flex mt-10 text-3xl'>
 
             <div className='border border-gray-300 mt-20 rounded-4xl ml-10 h-110 w-130 p-6 '>
              <span className='flex'>
@@ -202,7 +202,7 @@ const Reviews = () => {
             </div>
             </div>
 
-           <div className='flex mt-20 items-center justify-center'>
+           <div className='flex mt-10 items-center justify-center' onClick={handleClick}>
              <button className='text-3xl cursor-pointer border h-20 w-50 rounded-full bg-black text-white hover:bg-blue-700 hover:text-white duration-300'>
                 View  All
             </button>
@@ -210,7 +210,7 @@ const Reviews = () => {
 
 
 
-           <div className='flex bg-gray-100 pb-20 mt-20'>
+           <div className='flex bg-gray-100 pb-10 mt-10'>
            <div className='flex flex-col ml-20'>
              <h1 className=' text-3xl mt-30'>
                 <span className='inline-flex -translate-y-1'>

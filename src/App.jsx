@@ -11,6 +11,7 @@ import Pricing from './Component/Pages/Pricing'
 import Location from './Component/Pages/Location'
 import Footer from './Component/Pages/Footer'
 import Reserve from './Component/Popular/Reserve'
+import Map from './Component/Pages/Map'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,8 @@ function App() {
     <>
     <BrowserRouter>
         <Routes>
+          <Route path='/reserve' element={<Reserve/>}/>
+          <Route path='/map' element={<Map/>}/>
           <Route path="/" element={
             <>
                 <Hero/>
@@ -31,7 +34,7 @@ function App() {
             </>
           }
           />
-          <Route path='/reserve' element={<Reserve/>}/>
+          
          
         </Routes>
     </BrowserRouter>    

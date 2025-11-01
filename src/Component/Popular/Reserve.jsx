@@ -277,6 +277,136 @@ const Reserve = () => {
     }
   ]
 
+  const tabs = {
+    popular: [
+      {city: "Philadelphia",type:"Villa rentals"},
+      {city: "Mount Pocono",type:"Cottage rentals"},
+      {city: "Savannah",type:"Apartment rentals"},
+      {city: "Manhattan",type:"Apartment rentals"},
+      {city: "Brooklyn",type:"House rentals"},
+      {city: "Detroit",type:"Condo rentals"},
+      {city: "Albuquerque",type:"House rentals"},
+      {city: "Kyoto",type:"Vacation rentals"},
+      {city: "Chaeleston",type:"Condo rentals"},
+      {city: "London",type:"Vacation rentals"},
+    ],
+
+    arts: [
+      {city: "Snowbird Ski Resort Heliport", type: "Condo rentals"},
+      {city: "Coronado Island", type: "Cottage rentals"},
+      {city: "Playas Samara", type: "Condo rentals"},
+      {city: "Telluride Ski Resort", type: "Cabin rentals"},
+      {city: "Hondik University", type: "Vacation rentals"},
+      {city: "Le Marais", type: "Vacation rentals"},
+      {city: "Beech Mountain Ski Resort", type: "Cabin rentals"},
+      {city: "Everglades", type: "Villa rentals"},
+      {city: "Jack Frost Ski Resort", type: "House rentals"},
+      {city: "Northstar At Tahoe Resort", type: "Vacation rentals"},
+      {city: "Namba Sta.", type: "Condo rentals"},
+    ],
+
+    beach: [
+      {city:"Zipolite, Oaxaca", type:"Pet-friendly rentals"},
+      {city:"Misquamicut State Beach", type:"Pet-friendly rentals"},
+      {city:"Playa Cocles", type:"Beachfront rentals"},
+      {city:"Jamica Beach", type:"Beachfront rentals"},
+      {city:"Playa Negra", type:"Villa rentals"},
+      {city:"Playa Norte", type:"Apartment rentals"},
+      {city:"Caya Caulker", type:"Beachfront rentals"},
+      {city:"Upham Beach", type:"House rentals"},
+      {city:"Guarapari", type:""},
+      {city:"Bridgetown", type:"Apartment rentals"},
+      {city:"Newquay", type:"Apartment rentals"},
+    ],
+
+    mountains: [
+      {city:"Durango", type:"Cabin rentals"},
+      {city:"Ogden", type:"Pet-friendly rentals"},
+      {city:"Glendale", type:"Pet-friendly rentals"},
+      {city:"St. Moritz", type:"Condo rentals"},
+      {city:"Kalispell", type:"Condo rentals"},
+      {city:"Denver", type:"Condo rentals"},
+      {city:"Fullerton", type:"pet-friendly rentals"},
+      {city:"Visalia", type:"Apartment rentals"},
+      {city:"Alpharetta", type:"Vella rentals"},
+      {city:"Oslo", type:"Pet-friendly rentals"},
+      {city:"Staunton", type:"Cabin rentals"},
+    ],
+
+    outdoors: [
+      {city:"Palm Springs", type:"Cottage rentals"},
+      {city:"Orderville", type:"Cabin rentals"},
+      {city:"Carolina", type:"Condo rentals"},
+      {city:"Quepos", type:"Apartment rentals"},
+      {city:"Sequim", type:"Apartment rentals"},
+      {city:"Falmouth", type:"Vacation rentals"},
+      {city:"Santa Marta", type:"Cabin rentals"},
+      {city:"Juan Dolio", type:"House rentals"},
+      {city:"Kanab", type:"Cabin rentals"},
+      {city:"Evergreen", type:"Apartment rentals"},
+    ],
+
+    things: [
+      {city:"Puebla", type:"Nature and outdoors"},
+      {city:"Maxico City", type:"Entertainment"},
+      {city:"Homshu", type:"Art and culture"},
+      {city:"Rome", type:"Nature and outdoors"},
+      {city:"Tokyo", type:"Things to do"},
+      {city:"Plainview", type:"Things to do"},
+      {city:"Tama River", type:"Sports activities"},
+      {city:"Florence", type:"Tours"},
+      {city:"Medellin River", type:"Things to do"},
+      {city:"Rome Norte", type:"Things to do"},
+      {city:"Medellin", type:"Nature and outdoors"},
+    ],
+
+    travel: [
+      {city:"Familt travel hub", type:"Tips and inspiration"},
+      {city:"Famiy budget travel", type:"Get there for less"},
+      {city:"Vacation ideas for any budget", type:"Make it special without makin..."},
+      {city:"Travel Europe on a budget", type:"How to take the  kids to Euro..."},
+      {city:"Outdoor Aventure", type:"Explore nature with the fam..."},
+      {city:"Bucket list national park", type:"Must see parks for family tra..."},
+      {city:"Kid-friendly state parks", type:"Check out these family-friend..."},
+    ],
+
+    airbnb: [
+      {city:"Albuquerque", type:"New Maxico"},
+      {city:"Arlington, TX", type:"Texas"},
+      {city:"Atlanta Metro", type:"Georgia"},
+      {city:"Augusta", type:"Georgia"},
+      {city:"Bentonville", type:"Arkansas"},
+      {city:"Birmingham", type:"Alabama"},
+      {city:"Boise", type:"Idaho"},
+      {city:"Chicago Metro", type:"Illinois"},
+      {city:"Cincinnati", type:"Ohio"},
+      {city:"Columbus", type:"Ohio"},
+      {city:"Crestview", type:"Florida"},
+    ]
+  }
+
+  const tabNames = [
+    "popular",
+    "arts",
+    "beach",
+    "mountains",
+    "outdoors",
+    "things",
+    "travel",
+    "airbnb"
+  ]
+
+  const labelMap = {
+    popular: "Popular",
+    arts: "Arts & culture",
+    beach: "Beach",
+    mountains: "Mountains",
+    outdoors: "Outdoors",
+    things: "Thiings to do",
+    travel: "Travel tips and inspiration",
+    airbnb: "Airbnb-friendly Apartment"
+  }
+
   const currentYear = new Date().getFullYear();
 
 
@@ -452,95 +582,42 @@ const Reserve = () => {
    
    <section className='ml-5'>
      <h1 className='text-4xl font-medium'>Inspiration for future fateways</h1>
+     
      <div className='flex flex-wrap text-xl mt-5 gap-6 border-b border-gray-300 pb-5 text-gray-600'>
-      <button className='hover:text-black hover:border-b-2'>Popular</button>
-      <button className='hover:text-black hover:border-b-2'>Arts & culture</button>
-      <button className='hover:text-black hover:border-b-2'>Beach</button>
-      <button className='hover:text-black hover:border-b-2'>Mountains</button>
-      <button className='hover:text-black hover:border-b-2'>Outdoors</button>
-      <button className='hover:text-black hover:border-b-2'>Things to do</button>
-      <button className='hover:text-black hover:border-b-2'>Travel tips & inspiration</button>
-      <button className='hover:text-black hover:border-b-2'>Airbnb-friendly apartments</button>
-     </div>
+      {tabNames.map((tab) => (
+        <button
+        key={tab}
+        onClick={() => setActiveTab(tab)}
+        className={`relative pb-1 transition-all duration-300 ${
+          activeTab === tab
+          ? "text-black text-xl font-medium after:absolute after:bottom-0 after:left-0  after:w-full after:h-[2px] after:bg-black"
+          : "hover:text-black"
+        }`}
+        >
+          {labelMap[tab]}
 
+        </button>
+      ))}
+      </div>
 
-     <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-y-8 mt-6 text-gray-700'>
-      <span>
-          <p class="text-xl font-semibold">Dallas</p>
-          <p class="text-xl text-gray-500">Condo rentals</p>
-      </span>
-      <span>
-          <p class="text-xl font-semibold">Portland</p>
-          <p class="text-xl text-gray-500">Monthly Rentals</p>
-      </span>
-      <span>
-          <p class="text-xl font-semibold">Cleveland</p>
-          <p class="text-xl text-gray-500">Villa rentals</p>
-      </span>
-      <span>
-          <p class="text-xl font-semibold">Barcelona</p>
-          <p class="text-xl text-gray-500">Apartment rentals</p>
-      </span>
-      <span>
-          <p class="text-xl font-semibold">Galveston</p>
-          <p class="text-xl text-gray-500">House rentals</p>
-      </span>
-      <span>
-          <p class="text-xl font-semibold">Raleigh</p>
-          <p class="text-xl text-gray-500">Condo rentals</p>
-      </span>
-      <span>
-          <p class="text-xl font-semibold">Kaua‘i County</p>
-          <p class="text-xl text-gray-500">House rentals</p>
-      </span>
-       <span>
-          <p class="text-xl font-semibold">Portland</p>
-          <p class="text-xl text-gray-500">House rentals</p>
-      </span>
-       <span>
-          <p class="text-xl font-semibold">Minneapolis</p>
-          <p class="text-xl text-gray-500">Monthly Rentals</p>
-      </span>
-       <span>
-          <p class="text-xl font-semibold">Philadelphia</p>
-          <p class="text-xl text-gray-500">Apartment rentals</p>
-      </span>
-       <span>
-          <p class="text-xl font-semibold">Gulf Shores</p>
-          <p class="text-xl text-gray-500">Apartment rentals</p>
-      </span>
-       <span>
-          <p class="text-xl font-semibold">Amsterdam</p>
-          <p class="text-xl text-gray-500">Apartment rentals</p>
-      </span>
-       <span>
-          <p class="text-xl font-semibold">Queens</p>
-          <p class="text-xl text-gray-500">House rentals</p>
-      </span>
-      <span>
-          <p class="text-xl font-semibold">Tokyo</p>
-          <p class="text-xl text-gray-500">Condo rentals</p>
-      </span>
-      <span>
-          <p class="text-xl font-semibold">West Palm Beach</p>
-          <p class="text-xl text-gray-500">Condo rentals</p>
-      </span>
-      <span>
-          <p class="text-xl font-semibold">St. Petersburg</p>
-          <p class="text-xl text-gray-500">Monthly Rentals</p>
-      </span>
-      <span>
-          <p class="text-xl font-semibold">Charlotte</p>
-          <p class="text-xl text-gray-500">Apartment rentals</p>
-      </span>
+      <div className='grid grid-cols-2 text-lg sm:grid-cols-3 md:grid-cols-6 gap-y-6 mt-6 text-gray-800'>
+        {(tabs[activeTab] || []).map((item, index) => (
+          <span key={index}>
+            <p className='font-semibold truncate'>{item.city}</p>
+            <p className='text-gray-600 hover:text-black'>{item.type}</p>
+          </span>
+        ))}
+        
       <span className='flex gap-2'>
-        <p class="font-semibold text-black text-xl cursor-pointer hover:underline">Show more</p>
+        <p class="font-semibold text-gray-800 text-lg cursor-pointer hover:underline">Show more</p>
         <ChevronDown className='mt-1'/>
       </span>
-     </div>
+     
+      </div>
 
-     <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 mt-8'>
-      <span className='text-xl'>
+
+     <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 mt-15'>
+      <span className='text-lg'>
         <h3 className='font-semibold mb-2'>Support</h3>
         <ul className='space-y-4'>
           <li><a href="#" className='hover:underline'>Help center</a></li>
@@ -553,7 +630,7 @@ const Reserve = () => {
         </ul>
       </span>
 
-      <span className='text-xl'>
+      <span className='text-lg'>
         <h1 className='font-semibold mb-2'>Hosting</h1>
         <ul className='space-y-4'>
           <li><a href="#" className='hover:underline'>Airbnb your home</a></li>
@@ -569,7 +646,7 @@ const Reserve = () => {
         </ul>
       </span>
 
-      <span className='text-xl'>
+      <span className='text-lg'>
         <h1 className='font-semibold mb-2'>Airbnb</h1>
         <ul className='space-y-4'>
           <li><a href="#" className='hover:underline'>2025 Summer Release</a></li>

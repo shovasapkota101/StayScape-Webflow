@@ -1,17 +1,37 @@
 import { ArrowUpRight, Building2, Leaf, MapIcon, MapPin, Menu, Phone, PhoneCall, Smile, Users2, Wrench, } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import BannerImage from '../assets/img1.avif';
 import Introduction_image from '../assets/Introimg.avif';
 import Reserve_Image from '../assets/reserveImg.avif';
 import { Link, useNavigate } from 'react-router-dom';
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const menuRef = useRef(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)){
+        setMenuOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  },[] )
   
   const navigate = useNavigate();
 
-  const handleClick = () => {
+  const handlereserveClick = () => {
     navigate('/reserve');
   };
+
+  const handlemapclick = () => {
+    navigate('/map');
+  }
+
 
   return (
     <div>
@@ -23,7 +43,7 @@ const Hero = () => {
             
                <button className='flex items-center ml-130 mt-8 gap-2 py-4 px-2 border border-gray-300 w-16 h-16 rounded-full justify-center cursor-pointer hover:bg-blue-800 hover:text-white transition-all duration-300 ease-in-out '><PhoneCall size={25}/></button>
 
-            <div className='relative'>
+            <div ref={menuRef} className='relative'>
               <button 
                onClick={() => setMenuOpen(!menuOpen) }
                     
@@ -124,7 +144,7 @@ const Hero = () => {
                       </button>
                       
                     </div>
-                    <div className='relative overflow-hidden rounded-4xl' onClick={handleClick}>
+                    <div className='relative overflow-hidden rounded-4xl' onClick={handlereserveClick}>
                       <img src={Reserve_Image} alt="Reserve" className='h-50 w-full rounded-4xl transform transition-transform duration-500 hover:scale-110' />
                       <p className='absolute text-white top-15 cursor-pointer ml-45 flex items-center gap-4 text-5xl font-medium py-3 px-3'>Reserve Now <ArrowUpRight size={50} /> </p>
                     </div>
@@ -144,7 +164,7 @@ const Hero = () => {
                <p className='text-2xl font-light ml-70 mt-8'>Loved by 200+ happy guests</p>
                
                   
-           <button className='flex px-4 py-2 items-center gap-1 border border-gray-300 rounded-full bg-black text-white mt-10 ml-70 h-20 w-70 hover:bg-blue-800 duration-200 hover:scale-105' onClick={handleClick}> <div className='flex items-center justify-center bg-white text-black border rounded-full h-13 w-14'><ArrowUpRight/></div> <span className='text-3xl'>Reserve Now</span></button>
+           <button className='flex px-4 py-2 items-center gap-1 border border-gray-300 rounded-full bg-black text-white mt-10 ml-70 h-20 w-70 hover:bg-blue-800 duration-200 hover:scale-105' onClick={handlereserveClick}> <div className='flex items-center justify-center bg-white text-black border rounded-full h-13 w-14' ><ArrowUpRight/></div> <span className='text-3xl'>Reserve Now</span></button>
 
           
                <button className='flex flex-col items-center border border-gray-300 rounded-4xl mt-12 ml-18 gap-8 px-30 py-8 shadow-sm w-fit space-x-2 '> 
@@ -172,7 +192,7 @@ const Hero = () => {
 
               <div className='flex'>
                 <img src={BannerImage} alt="Banner"  className='w-250 rounded-4xl h-240 shadow-md object-cover'/>
-                <div className='absolute top-[53rem] right-10 border border-gray-300 rounded-full h-20 w-20 flex items-center justify-center cursor-pointer bg-white hover:bg-blue-600  transition-all duration-300 ease-in-out '><MapIcon size={35} strokeWidth={1} className='text-gray-600 hover:text-white'/></div>
+                <div className='absolute top-[53rem] right-10 border border-gray-300 rounded-full h-20 w-20 flex items-center justify-center cursor-pointer bg-white hover:bg-blue-600  transition-all duration-300 ease-in-out ' onClick={handlemapclick}><MapIcon size={35} strokeWidth={1} className='text-gray-600 hover:text-white' /></div>
               </div>
         </div> 
         <div className='relative w-fit mt-8 '> <img src={Introduction_image} alt="Introduction" />
