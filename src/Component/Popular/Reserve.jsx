@@ -38,7 +38,7 @@ import Melbourne8 from '../assets/melbourne8.avif'
 import { ChevronDown, ChevronRight, Copyright, Facebook, Globe, Instagram, Menu, SearchIcon} from 'lucide-react'
 
 const Reserve = () => {
-  const [activeTab, setActiveTab] = useState('home')
+  const [activeTab, setActiveTab] = useState('home');
 
   const homes = [
     {
@@ -553,7 +553,14 @@ const Reserve = () => {
     ))}
   </div>
 
-   {/* horizontal scroll container */}
+  <div>
+     <div className="flex items-center gap-2 text-2xl font-medium mb-3 mt-10">
+    <h1>Available next months in Melbourne</h1>
+    <ChevronRight />
+  </div>
+
+  {/* horizontal scroll container */}
+
   <div className="flex gap-4 overflow-auto p-2 scrollbar-hide">
     {melbourne.map((home) => (
       <div
@@ -575,6 +582,8 @@ const Reserve = () => {
       </div>
     ))}
   </div>
+  </div>
+
 </div>
 
 <footer>

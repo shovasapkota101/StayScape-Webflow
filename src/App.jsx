@@ -12,6 +12,7 @@ import Location from './Component/Pages/Location'
 import Footer from './Component/Pages/Footer'
 import Reserve from './Component/Popular/Reserve'
 import Map from './Component/Pages/Map'
+import Licenses from './Component/Popular/Licenses'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path='/reserve' element={<Reserve/>}/>
           <Route path='/map' element={<Map/>}/>
+          <Route path='/licenses' element={<Licenses/>}/>
           <Route path="/" element={
             <>
                 <Hero/>

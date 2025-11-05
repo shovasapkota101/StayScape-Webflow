@@ -12,6 +12,10 @@ const Footer = () => {
     navigate('/reserve');
   };
 
+  const handleLicensesClick = () => {
+    navigate('/licenses');
+  };
+
   return (
     <div>
         <div className='bg-black pb-10'>
@@ -51,9 +55,9 @@ const Footer = () => {
            </div>
            </div>
 
-           <div className='font-medium text-gray-400 px-10 py-4   flex items-center text-center text-2xl'>
+           <div className='font-medium text-gray-400 px-10 py-4   flex items-center text-center text-2xl' >
               <span className='flex items-center cursor-pointer gap-2'> <Copyright className='mt-1'/>Stayscape, {currentYear}</span>
-              <p className='cursor-pointer ml-[80rem]'>Licenses</p>
+              <p className='cursor-pointer ml-[80rem]' onClick={handleLicensesClick}>Licenses</p>
            </div>
           <div className='relative overflow-hidden rounded-4xl mr-10 cursor-pointer'>
              <img src={FooterImg} alt="Footer" className='ml-10 mt-5 h-110 w-[100rem] rounded-4xl ani object-cover ease-in-out transform transition-transform duration-500 scale-100 hover:scale-110' />

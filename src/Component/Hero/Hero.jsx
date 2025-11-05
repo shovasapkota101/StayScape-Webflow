@@ -38,18 +38,18 @@ const Hero = () => {
     <div className='flex justify-between'>
       <div className=' flex-col gap-6' >
         <div className=' flex justify-between items-center px-4 py-4'> 
-              <button className='px-4 py-2 mt-8 ml-4 gap-3 border border-gray-300 rounded-full text-2xl font-normal flex items-center cursor-pointer hover:bg-blue-800 hover:text-white transition-all duration-300 ease-in-out'> <Building2/> StayScape</button> 
+              <button className='px-4 py-2 mt-8 ml-4 gap-3 border border-gray-300 rounded-full text-xl font-normal flex items-center cursor-pointer hover:bg-blue-800 hover:text-white transition-all duration-300 ease-in-out'> <Building2/> StayScape</button> 
 
             
-               <button className='flex items-center ml-130 mt-8 gap-2 py-4 px-2 border border-gray-300 w-16 h-16 rounded-full justify-center cursor-pointer hover:bg-blue-800 hover:text-white transition-all duration-300 ease-in-out '><PhoneCall size={25}/></button>
+               <button className='flex items-center ml-130 mt-8 gap-2 py-4 px-2 border border-gray-300 w-14 h-14 rounded-full justify-center cursor-pointer hover:bg-blue-800 hover:text-white transition-all duration-300 ease-in-out '><PhoneCall size={20}/></button>
 
             <div ref={menuRef} className='relative'>
               <button 
                onClick={() => setMenuOpen(!menuOpen) }
                     
-              className=' flex items-center ml-1 mt-8 border border-gray-300 w-16 h-16 rounded-full justify-center cursor-pointer hover:bg-blue-800 hover:text-white transition-all duration-300 ease-in-out '><Menu size={25}/></button>
+              className=' flex items-center ml-1 mt-8 border border-gray-300 w-14 h-14 rounded-full justify-center cursor-pointer hover:bg-blue-800 hover:text-white transition-all duration-300 ease-in-out '><Menu size={20}/></button>
               {menuOpen && (
-                <div className='absolute right-0 top-20 bg-white border border-gray-400 rounded-3xl shadow-lg p-6 m-6 w-fit z-50'>
+                <div className='absolute right-0 top-20 bg-white border border-gray-400 rounded-2xl shadow-lg p-6 m-6 w-fit z-50'>
                   <ul className='flex flex-col gap-4 mt-6 text-gray-800'>
                     
                      <div className='flex justify-between gap-50'>
@@ -154,7 +154,7 @@ const Hero = () => {
             </div>
         </div>
 
-          <button className='flex mt-10 ml-60 border border-gray-300 rounded-full px-4 py-2 text-2xl font-light'>
+          <button className='flex mt-10 ml-80 border border-gray-300 rounded-full px-4 py-2 text-xl font-light'>
               <span className='flex items-center gap-2'>
                      <MapPin/> 953 5th Ave, New York <ArrowUpRight/>
               </span>
@@ -164,7 +164,7 @@ const Hero = () => {
                <p className='text-2xl font-light ml-70 mt-8'>Loved by 200+ happy guests</p>
                
                   
-           <button className='flex px-4 py-2 items-center gap-1 border border-gray-300 rounded-full bg-black text-white mt-10 ml-70 h-20 w-70 hover:bg-blue-800 duration-200 hover:scale-105' onClick={handlereserveClick}> <div className='flex items-center justify-center bg-white text-black border rounded-full h-13 w-14' ><ArrowUpRight/></div> <span className='text-3xl'>Reserve Now</span></button>
+           <button className='flex gap-5 px-4 py-2 items-center border border-gray-300 rounded-full bg-black text-white mt-10 ml-70 h-17 w-60 hover:bg-blue-800 duration-200 hover:scale-105' onClick={handlereserveClick}> <div className='flex items-center justify-center bg-white text-black border rounded-full h-15 w-15 hover:border-blue-800' ><ArrowUpRight/></div> <span className='text-xl'>Reserve Now</span></button>
 
           
                <button className='flex flex-col items-center border border-gray-300 rounded-4xl mt-12 ml-18 gap-8 px-30 py-8 shadow-sm w-fit space-x-2 '> 
