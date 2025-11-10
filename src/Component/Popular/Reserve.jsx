@@ -402,7 +402,7 @@ const Reserve = () => {
     beach: "Beach",
     mountains: "Mountains",
     outdoors: "Outdoors",
-    things: "Thiings to do",
+    things: "Things to do",
     travel: "Travel tips and inspiration",
     airbnb: "Airbnb-friendly Apartment"
   }
@@ -412,49 +412,49 @@ const Reserve = () => {
 
   return (
     <div className='ml-10 pb-10 mr-10'>
-        <div className='flex items-center gap-5 ml-30 mt-10 pb-5'>
-            <img src={AirBnbLogo} alt="AirbnbLogo" className='h-10'/>
-            <h1 className='text-red-600 font-medium text-4xl'>airbnb</h1>
+        <div className='flex items-center gap-3 ml-5 mt-5 pb-5'>
+            <img src={AirBnbLogo} alt="AirbnbLogo" className='h-8'/>
+            <h1 className='text-red-600 font-medium text-2xl'>airbnb</h1>
 
-             <span className='flex items-center ml-10 text-xl hover:font-bold '>
-              <img src={HomeLogo} alt="Home" className='ml-[20rem] h-20' />
+             <span className='flex items-center ml-10 text-sm hover:font-bold '>
+              <img src={HomeLogo} alt="Home" className='ml-[18rem] h-15' />
               <h1>Homes</h1>
              </span>
-             <span className='flex items-center ml-20 text-xl hover:font-bold '>
-              <img src={HotAirBalloon} alt="AirBalloon" className='h-15' />
+             <span className='flex items-center ml-20 text-sm hover:font-bold '>
+              <img src={HotAirBalloon} alt="AirBalloon" className='h-13' />
               <h1>Experiences</h1>
              </span>
-             <span className='flex ml-10 items-center text-xl hover:font-bold '>
-              <img src={CookingPot} alt="Cooking" className=' h-20' />
+             <span className='flex ml-10 items-center text-sm hover:font-bold '>
+              <img src={CookingPot} alt="Cooking" className=' h-13' />
               <h1>Services</h1>
               
              </span>
 
-             <span className='ml-[8rem] font-bold text-xl  hover:rounded-full hover:bg-gray-200 duration-300 px-4 py-3'>
+             <span className='ml-[8rem] font-bold text-sm  hover:rounded-full hover:bg-gray-200 duration-300 px-4 py-3'>
               <h1>Become a host</h1>
              </span>
 
-             <span className='border bg-gray-100 border-gray-100 rounded-full hover:rounded-full hover:bg-gray-200 px-3 py-3 '>
-              <Globe size={30} strokeWidth={1}/>
+             <span className='border bg-gray-100 border-gray-100 rounded-full hover:rounded-full hover:bg-gray-200 px-2 py-2 '>
+              <Globe size={20} strokeWidth={1}/>
              </span>
 
-             <span className='border bg-gray-100 border-gray-100 rounded-full px-3 py-3 hover:bg-gray-200'>
-              <Menu strokeWidth={1} size={30}/>
+             <span className='border bg-gray-100 border-gray-100 rounded-full px-2 py-2 hover:bg-gray-200'>
+              <Menu strokeWidth={1} size={20}/>
              </span>
         </div>
         
-        <div className='flex-col items-center justify-center ml-[10rem] pb-[4rem]'>
-        <span className='flex items-center justify-center border border-gray-300 shadow-xl rounded-full gap-10 text-xl h-[6rem] w-fit px-6 '>
-            <h1 className=' hover:border-gray-200 hover:bg-gray-200 rounded-full transition-all duration-200 px-12 py-5'>Where <br /> <span className='text-gray-400'>Search Destinstions</span></h1>
-          <span className='border h-10 border-gray-300'/>
+        <div className='flex-col items-center justify-center ml-[6rem] pb-[4rem]'>
+        <span className='flex items-center justify-center border border-gray-300 shadow-xl rounded-full gap- text-sm h-[5rem] w-fit px-6 '>
+            <h1 className=' hover:border-gray-200 hover:bg-gray-200 rounded-full transition-all duration-200 px-8 py-5'>Where <br /> <span className='text-gray-400'>Search Destinstions</span></h1>
+          <span className='border h-7 border-gray-300'/>
           <h1 className='cursor-pointer hover:border-gray-200 hover:bg-gray-200 rounded-full transition-all duration-200 px-12 py-5'>Check in <br /><span className='text-gray-400'>Add dates</span></h1>
-          <span className='border h-10 border-gray-300'/>
+          <span className='border h-7 border-gray-300'/>
           <h1 className='cursor-pointer hover:border-gray-200 hover:bg-gray-200 rounded-full transition-all duration-200 px-12 py-5'>Check out <br /><span 
           className='text-gray-400'>Add dates</span></h1>
-          <span className='border h-10 border-gray-300'/>
-          <div className='flex justify-center items-center cursor-pointer gap-30 hover:border-gray-200 hover:bg-gray-200 rounded-full transition-all duration-200 px-12 py-5'>
+          <span className='border h-7 border-gray-300'/>
+          <div className='flex justify-center items-center cursor-pointer gap-30 hover:border-gray-200 hover:bg-gray-200 rounded-full transition-all duration-200 px-8 py-3'>
             <h1>Who <br /><span className='text-gray-400'>Add guests</span></h1>
-           <span className='flex items-center justify-center border border-red-500 bg-red-500  hover:border hover:bg-red-700 hover:border-red-700 rounded-full h-15 w-15'>
+           <span className='flex items-center justify-center border border-red-500 bg-red-500  hover:border hover:bg-red-700 hover:border-red-700 rounded-full h-14 w-14'>
              <SearchIcon strokeWidth={1} className='text-white'/>
            </span>
           </div>
@@ -464,7 +464,7 @@ const Reserve = () => {
 
 
        <div>
-  <div className="flex items-center gap-2 text-2xl font-medium mb-3 mt-5">
+  <div className="flex items-center gap-2 text-xl font-medium mb-3 mt-5">
     <h1>Popular homes in Kathmandu</h1>
     <ChevronRight />
   </div>
@@ -482,10 +482,10 @@ const Reserve = () => {
           className="w-60 h-60 object-cover rounded-2xl"
         />
         <div className="p-3">
-          <h3 className="font-medium">{home.title}</h3>
+          <h3 className="font-medium text-sm">{home.title}</h3>
           <span className='flex items-center gap-2'>
-            <p className="text-sm text-gray-500">{home.price}</p>
-          <p className="text-sm font-semibold mt-1">⭐ {home.rating}</p>
+            <p className="text-xs text-gray-500">{home.price}</p>
+          <p className="text-xs font-semibold mt-1">⭐ {home.rating}</p>
           </span>
         </div>
       </div>
@@ -494,7 +494,7 @@ const Reserve = () => {
 </div>
 
 <div>
-  <div className="flex items-center gap-2 text-2xl font-medium mb-3 mt-10">
+  <div className="flex items-center gap-2 text-xl font-medium mb-3 mt-10">
     <h1>Available next months in Seoul</h1>
     <ChevronRight />
   </div>
@@ -512,10 +512,10 @@ const Reserve = () => {
           className="w-60 h-60 object-cover rounded-2xl"
         />
         <div className="p-3">
-          <h3 className="font-medium">{home.title}</h3>
+          <h3 className="font-medium text-sm">{home.title}</h3>
           <span className='flex items-center gap-2'>
-            <p className="text-sm text-gray-500">{home.price}</p>
-          <p className="text-sm font-semibold mt-1">⭐ {home.rating}</p>
+            <p className="text-xs text-gray-500">{home.price}</p>
+          <p className="text-xs font-semibold mt-1">⭐ {home.rating}</p>
           </span>
         </div>
       </div>
@@ -525,7 +525,7 @@ const Reserve = () => {
 
 
 <div>
-  <div className="flex items-center gap-2 text-2xl font-medium mb-3 mt-10">
+  <div className="flex items-center gap-2 text-xl font-medium mb-3 mt-10">
     <h1>Stay in Tokyo</h1>
     <ChevronRight />
   </div>
@@ -543,10 +543,10 @@ const Reserve = () => {
           className="w-60 h-60 object-cover rounded-2xl"
         />
         <div className="p-3">
-          <h3 className="font-medium">{home.title}</h3>
+          <h3 className="font-medium text-sm">{home.title}</h3>
           <span className='flex items-center gap-2'>
-            <p className="text-sm text-gray-500">{home.price}</p>
-          <p className="text-sm font-semibold mt-1">⭐ {home.rating}</p>
+            <p className="text-xs text-gray-500">{home.price}</p>
+          <p className="text-xs font-semibold mt-1">⭐ {home.rating}</p>
           </span>
         </div>
       </div>
@@ -554,7 +554,7 @@ const Reserve = () => {
   </div>
 
   <div>
-     <div className="flex items-center gap-2 text-2xl font-medium mb-3 mt-10">
+     <div className="flex items-center gap-2 text-xl font-medium mb-3 mt-10">
     <h1>Available next months in Melbourne</h1>
     <ChevronRight />
   </div>
@@ -573,10 +573,10 @@ const Reserve = () => {
           className="w-60 h-60 object-cover rounded-2xl"
         />
         <div className="p-3">
-          <h3 className="font-medium">{home.title}</h3>
+          <h3 className="font-medium text-sm">{home.title}</h3>
           <span className='flex items-center gap-2'>
-            <p className="text-sm text-gray-500">{home.price}</p>
-          <p className="text-sm font-semibold mt-1">⭐ {home.rating}</p>
+            <p className="text-xs text-gray-500">{home.price}</p>
+          <p className="text-xs font-semibold mt-1">⭐ {home.rating}</p>
           </span>
         </div>
       </div>
@@ -590,16 +590,16 @@ const Reserve = () => {
   <div className=' pd-10 py-10 mt-5 bg-gray-100 cursor-pointer'>
    
    <section className='ml-5'>
-     <h1 className='text-4xl font-medium'>Inspiration for future fateways</h1>
+     <h1 className='text-2xl font-medium'>Inspiration for future fateways</h1>
      
-     <div className='flex flex-wrap text-xl mt-5 gap-6 border-b border-gray-300 pb-5 text-gray-600'>
+     <div className='flex flex-wrap text-lg mt-5 gap-6 border-b border-gray-300 pb-5 text-gray-600'>
       {tabNames.map((tab) => (
         <button
         key={tab}
         onClick={() => setActiveTab(tab)}
         className={`relative pb-1 transition-all duration-300 ${
           activeTab === tab
-          ? "text-black text-xl font-medium after:absolute after:bottom-0 after:left-0  after:w-full after:h-[2px] after:bg-black"
+          ? "text-black text-lg font-medium after:absolute after:bottom-0 after:left-0  after:w-full after:h-[2px] after:bg-black"
           : "hover:text-black"
         }`}
         >
@@ -609,7 +609,7 @@ const Reserve = () => {
       ))}
       </div>
 
-      <div className='grid grid-cols-2 text-lg sm:grid-cols-3 md:grid-cols-6 gap-y-6 mt-6 text-gray-800'>
+      <div className='grid grid-cols-2 text-sm sm:grid-cols-3 md:grid-cols-6 gap-y-6 mt-6 text-gray-800'>
         {(tabs[activeTab] || []).map((item, index) => (
           <span key={index}>
             <p className='font-semibold truncate'>{item.city}</p>
@@ -618,7 +618,7 @@ const Reserve = () => {
         ))}
         
       <span className='flex gap-2'>
-        <p class="font-semibold text-gray-800 text-lg cursor-pointer hover:underline">Show more</p>
+        <p class="font-semibold text-gray-800 text-sm cursor-pointer hover:underline">Show more</p>
         <ChevronDown className='mt-1'/>
       </span>
      
@@ -626,7 +626,7 @@ const Reserve = () => {
 
 
      <div className='grid grid-cols-1 sm:grid-cols-3 gap-8 mt-15'>
-      <span className='text-lg'>
+      <span className='text-sm'>
         <h3 className='font-semibold mb-2'>Support</h3>
         <ul className='space-y-4'>
           <li><a href="#" className='hover:underline'>Help center</a></li>
@@ -639,7 +639,7 @@ const Reserve = () => {
         </ul>
       </span>
 
-      <span className='text-lg'>
+      <span className='text-sm'>
         <h1 className='font-semibold mb-2'>Hosting</h1>
         <ul className='space-y-4'>
           <li><a href="#" className='hover:underline'>Airbnb your home</a></li>
@@ -655,7 +655,7 @@ const Reserve = () => {
         </ul>
       </span>
 
-      <span className='text-lg'>
+      <span className='text-sm'>
         <h1 className='font-semibold mb-2'>Airbnb</h1>
         <ul className='space-y-4'>
           <li><a href="#" className='hover:underline'>2025 Summer Release</a></li>
@@ -670,21 +670,21 @@ const Reserve = () => {
      </div>
      <hr className='ml-5 mr-5 mt-7 border-gray-300' />
 
-     <div className="flex w-full  text-gray-700 items-center text-sm">
+     <div className="flex w-full  text-gray-700 items-center text-xs">
   {/* Left side */}
-  <p className="flex items-center gap-2">
+  <p className="flex items-center gap-2 whitespace-nowrap">
     <Copyright strokeWidth={1} size={20} /> {currentYear} Airbnb, Inc.
   </p>
 
   {/* Right side */}
-  <ol className="flex w-full gap-5 list-disc list-inside">
+  <ol className="flex w-full gap-5 list-disc list-inside ml-5">
     <li className="hover:underline cursor-pointer">Terms</li>
     <li className="hover:underline cursor-pointer">Sitemap</li>
     <li className="hover:underline cursor-pointer">Privacy</li>
     <li className="hover:underline cursor-pointer">Your Privacy Choices</li>
   </ol>
 
-     <span className='flex items-center justify-end gap-5 text-xl font-medium mr-5 w-full cursor-pointer'>
+     <span className='flex items-center justify-end gap-5 text-sm font-medium mr-5 w-full cursor-pointer'>
       <Globe strokeWidth={1}/><p>English (US)</p>
       <p>$ USD</p>
       <span className='flex items-center justify-center hover:border rounded-full h-10 w-10 hover:bg-gray-200 hover:border-gray-200  '><Facebook strokeWidth={1}/></span>

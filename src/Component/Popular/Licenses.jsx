@@ -34,12 +34,12 @@ const Licenses = () => {
     <div>
         <div className='mt-30 pb-40'>
             <span className='flex justify-center '>
-                <h1 className='text-7xl font-medium'>Licenses</h1>
+                <h1 className='text-5xl font-medium'>Licenses</h1>
             </span>
-            <p className='flex justify-center text-center mt-5 text-3xl text-gray-400 font-medium leading-[-1]'>All graphical assets in this template are licensed for <br /> personal and commercial use. If you'd like to use a <br /> specific asset, please check the license below.</p>
+            <p className='flex justify-center text-center mt-5 text-lg text-gray-400 font-medium leading-[-1]'>All graphical assets in this template are licensed for <br /> personal and commercial use. If you'd like to use a <br /> specific asset, please check the license below.</p>
 
-            <div className='flex justify-center gap-3 text-xl font-medium mt-10'>
-                <button className='flex items-center justify-center gap-3 border rounded-full w-[230px] h-18 bg-black text-white hover:bg-blue-800  hover:scale-110 duration-300'> <span className='flex justify-center items-center border rounded-full h-14 w-14 bg-white text-black hover:border-blue-900'>
+            <div className='flex justify-center gap-3 text-sm font-medium mt-10'>
+                <button className='flex items-center justify-center gap-3 border rounded-full px-2 py-1 bg-black text-white hover:bg-blue-800  hover:scale-110 duration-300'> <span className='flex justify-center items-center border rounded-full px-2 py-2 bg-white text-black hover:border-blue-900'>
                    <ArrowUpRight strokeWidth={1}/> </span> Our Templates</button>
             </div>
             
@@ -51,9 +51,9 @@ const Licenses = () => {
                         className='rounded-4xl border border-neutral-200 bg-white p-20 text-center shadow-sm hover:-translate-y-1 transition'
                         >
                             <div className='flex justify-center mb-4 text-neutral-800'>{card.icon}</div>
-                            <h3 className='text-3xl font-semibold mb-2'>{card.title}</h3>
-                            <p className='text-neutral-600 mb-6 text-xl'>{card.text}</p>
-                            <button className='bg-black text-white px-5 py-3 text-xl rounded-full hover:bg-blue-700 transition'>{card.button}</button>
+                            <h3 className='text-2xl font-semibold mb-2'>{card.title}</h3>
+                            <p className='text-neutral-600 mb-6 text-sm'>{card.text}</p>
+                            <button className='bg-black text-white px-2 py-2 text-sm rounded-full hover:bg-blue-700 transition'>{card.button}</button>
                         </div>
                     ) )}
                 </div>
