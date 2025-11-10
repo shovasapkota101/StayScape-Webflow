@@ -52,7 +52,7 @@ const Hero = () => {
                 <div className='absolute right-0 top-20 bg-white border border-gray-400 rounded-2xl shadow-lg p-4 m-6 w-fit z-50'>
                   <ul className='flex flex-col gap-4 mt-4 text-gray-800'>
                     
-                     <div className='flex justify-between gap-50'>
+                     <div className='flex justify-between gap-30'>
                     <button
                     onClick={() => {
                       const aboutsection = document.getElementById('about');
@@ -62,7 +62,7 @@ const Hero = () => {
                       }
                       
                     }}
-                    className='text-left hover:text-blue-600 text-2xl font-medium '>
+                    className='text-left hover:text-blue-600 text-xl font-medium '>
                       About
                       <p className='text-xs text-gray-500'>Explore this home</p>
                     </button>
@@ -75,7 +75,7 @@ const Hero = () => {
                           setMenuOpen(false);
                         }
                       }}
-                      className='text-left hover:text-blue-600 text-2xl font-medium w-full'
+                      className='text-left hover:text-blue-600 text-xl font-medium w-full'
                     >
                       Gallery
                       <p className='text-xs text-gray-500'>Take a look inside</p>
@@ -90,7 +90,7 @@ const Hero = () => {
                       });
                     }
                    } }
-                    className='text-left hover:text-blue-600 text-2xl font-medium'
+                    className='text-left hover:text-blue-600 text-xl font-medium'
                    >
                     Features
                     <p className='text-xs text-gray-500'>Made for comfort</p>
@@ -108,7 +108,7 @@ const Hero = () => {
                           });
                         }
                       }}
-                       className='text-left hover:text-blue-600 text-2xl font-medium'
+                       className='text-left hover:text-blue-600 text-xl font-medium'
                       >
                         Reviews
                         <p className='text-xs text-gray-500'>What guests say</p>
@@ -123,7 +123,7 @@ const Hero = () => {
                           });
                         }
                       }}
-                      className='text-left hover:text-blue-600 text-2xl font-medium'
+                      className='text-left hover:text-blue-600 text-xl font-medium'
                       >
                         Pricing
                         <p className='text-xs text-gray-500'>Rates per night</p>
@@ -138,15 +138,15 @@ const Hero = () => {
                           });
                         }
                       }}
-                      className='text-left hover:text-blue-600 text-2xl font-medium'>
+                      className='text-left hover:text-blue-600 ml-10 text-xl font-medium'>
                         Location
                          <p className='text-xs text-gray-500'>Our NYC address</p>
                       </button>
                       
                     </div>
                     <div className='relative overflow-hidden rounded-4xl' onClick={handlereserveClick}>
-                      <img src={Reserve_Image} alt="Reserve" className='h-50 w-full rounded-4xl transform transition-transform duration-500 hover:scale-110' />
-                      <p className='absolute text-white top-15 cursor-pointer ml-45 flex items-center gap-4 text-3xl font-medium py-3 px-3'>Reserve Now <ArrowUpRight size={30} strokeWidth={2} /> </p>
+                      <img src={Reserve_Image} alt="Reserve" className='h-30 w-full rounded-4xl transform transition-transform duration-500 hover:scale-110' />
+                      <p className='absolute text-white top-8 cursor-pointer ml-30 flex items-center gap-4 text-2xl font-medium py-3 px-3'>Reserve Now <ArrowUpRight size={25} strokeWidth={2} /> </p>
                     </div>
                   </ul>
                 </div>

@@ -13,6 +13,7 @@ import Footer from './Component/Pages/Footer'
 import Reserve from './Component/Popular/Reserve'
 import Map from './Component/Pages/Map'
 import Licenses from './Component/Popular/Licenses'
+import ReserveImg from './Component/Popular/ReserveImg'
 
 function App() {
   const [count, setCount] = useState(0)
